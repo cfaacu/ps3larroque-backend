@@ -1,0 +1,298 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Api\\PS3Larroque.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Api\\PS3Larroque.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Api\\PS3Larroque.Api.csproj",
+        "projectName": "PS3Larroque.Api",
+        "projectPath": "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Api\\PS3Larroque.Api.csproj",
+        "packagesPath": "C:\\Users\\facu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\facu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Application\\PS3Larroque.Application.csproj": {
+                "projectPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Application\\PS3Larroque.Application.csproj"
+              },
+              "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj": {
+                "projectPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj"
+              },
+              "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Infrastructure\\PS3Larroque.Infrastructure.csproj": {
+                "projectPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Infrastructure\\PS3Larroque.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Application\\PS3Larroque.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Application\\PS3Larroque.Application.csproj",
+        "projectName": "PS3Larroque.Application",
+        "projectPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Application\\PS3Larroque.Application.csproj",
+        "packagesPath": "C:\\Users\\facu\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\facu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj": {
+                "projectPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj",
+        "projectName": "PS3Larroque.Domain",
+        "projectPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj",
+        "packagesPath": "C:\\Users\\facu\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\facu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Infrastructure\\PS3Larroque.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Infrastructure\\PS3Larroque.Infrastructure.csproj",
+        "projectName": "PS3Larroque.Infrastructure",
+        "projectPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Infrastructure\\PS3Larroque.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\facu\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\facu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Application\\PS3Larroque.Application.csproj": {
+                "projectPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Application\\PS3Larroque.Application.csproj"
+              },
+              "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj": {
+                "projectPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

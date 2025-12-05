@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS3Larroque.Api", "PS3Larroque.Api.csproj", "{D1870BD7-43CD-C7A0-D453-82674FFC5CC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1870BD7-43CD-C7A0-D453-82674FFC5CC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1870BD7-43CD-C7A0-D453-82674FFC5CC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1870BD7-43CD-C7A0-D453-82674FFC5CC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1870BD7-43CD-C7A0-D453-82674FFC5CC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD6C3729-3B40-466A-B2EF-48613FDFCE32}
+	EndGlobalSection
+EndGlobal
