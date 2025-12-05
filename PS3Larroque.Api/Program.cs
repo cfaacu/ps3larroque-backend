@@ -30,7 +30,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));
 
 // 🔹 CORS: habilitamos Netlify + localhost (para pruebas)
-const string CorsPolicyName = "AllowedOrigins";
+const string CorsPolicyName = "AllowFrontend";
 
 builder.Services.AddCors(options =>
 {
@@ -38,13 +38,15 @@ builder.Services.AddCors(options =>
     {
         policy
             .WithOrigins(
-                "https://lustrous-florentine-2899fd.netlify.app", // tu front en Netlify
-                "http://localhost:3000",                         // front local
-                "http://localhost:5000",                         // otra variante local
-                "http://localhost:5173"                          // por si usás Vite u otro
+                "https://inquisitive-puffpuff-ced639.netlify.app", // deploy nuevo en Netlify
+                "https://lustrous-florentine-2899fd.netlify.app",  // deploy anterior (por las dudas)
+                "http://localhost:3000",                           // front local
+                "http://localhost:5000",                           // variante local
+                "http://localhost:5173"                            // Vite u otros
             )
             .AllowAnyHeader()
             .AllowAnyMethod();
+            // Si en el futuro usás cookies/JWT por cookies, agregamos .AllowCredentials()
     });
 });
 
@@ -58,7 +60,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// 🔹 Swagger (lo dejamos siempre activado, si querés lo podés limitar a Development)
+// 🔹 Swagger (lo dejamos siempre activado)
 app.UseSwagger();
 app.UseSwaggerUI();
 
