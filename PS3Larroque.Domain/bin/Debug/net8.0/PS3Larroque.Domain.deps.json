@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PS3Larroque.Domain/1.0.0": {
+        "runtime": {
+          "PS3Larroque.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PS3Larroque.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

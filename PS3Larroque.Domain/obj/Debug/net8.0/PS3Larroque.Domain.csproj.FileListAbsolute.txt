@@ -1,0 +1,11 @@
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Domain\bin\Debug\net8.0\PS3Larroque.Domain.deps.json
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Domain\bin\Debug\net8.0\PS3Larroque.Domain.dll
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Domain\bin\Debug\net8.0\PS3Larroque.Domain.pdb
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Domain\obj\Debug\net8.0\PS3Larroque.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Domain\obj\Debug\net8.0\PS3Larroque.Domain.AssemblyInfoInputs.cache
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Domain\obj\Debug\net8.0\PS3Larroque.Domain.AssemblyInfo.cs
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Domain\obj\Debug\net8.0\PS3Larroque.Domain.csproj.CoreCompileInputs.cache
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Domain\obj\Debug\net8.0\PS3Larroque.Domain.dll
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Domain\obj\Debug\net8.0\refint\PS3Larroque.Domain.dll
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Domain\obj\Debug\net8.0\PS3Larroque.Domain.pdb
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Domain\obj\Debug\net8.0\ref\PS3Larroque.Domain.dll

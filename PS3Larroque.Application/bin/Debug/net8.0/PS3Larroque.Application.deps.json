@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PS3Larroque.Application/1.0.0": {
+        "dependencies": {
+          "PS3Larroque.Domain": "1.0.0"
+        },
+        "runtime": {
+          "PS3Larroque.Application.dll": {}
+        }
+      },
+      "PS3Larroque.Domain/1.0.0": {
+        "runtime": {
+          "PS3Larroque.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PS3Larroque.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PS3Larroque.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

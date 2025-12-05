@@ -1,0 +1,17 @@
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\bin\Debug\net8.0\PS3Larroque.Infrastructure.deps.json
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\bin\Debug\net8.0\PS3Larroque.Infrastructure.dll
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\bin\Debug\net8.0\PS3Larroque.Infrastructure.pdb
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\bin\Debug\net8.0\PS3Larroque.Application.dll
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\bin\Debug\net8.0\PS3Larroque.Domain.dll
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\bin\Debug\net8.0\PS3Larroque.Domain.pdb
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\bin\Debug\net8.0\PS3Larroque.Application.pdb
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\obj\Debug\net8.0\PS3Larroque.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\obj\Debug\net8.0\PS3Larroque.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\obj\Debug\net8.0\PS3Larroque.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\obj\Debug\net8.0\PS3Larroque.Infrastructure.AssemblyInfo.cs
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\obj\Debug\net8.0\PS3Larroque.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\obj\Debug\net8.0\PS3Larro.76384CD6.Up2Date
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\obj\Debug\net8.0\PS3Larroque.Infrastructure.dll
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\obj\Debug\net8.0\refint\PS3Larroque.Infrastructure.dll
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\obj\Debug\net8.0\PS3Larroque.Infrastructure.pdb
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\obj\Debug\net8.0\ref\PS3Larroque.Infrastructure.dll
