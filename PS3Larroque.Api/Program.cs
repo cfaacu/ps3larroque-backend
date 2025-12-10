@@ -30,7 +30,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));
 
 // 🔹 CORS: habilitamos Netlify + localhost (para pruebas)
-const string CorsPolicyName = "AllowFrontend";
+const string CorsPolicyName = "AllowedOrigins";
 
 builder.Services.AddCors(options =>
 {
@@ -38,15 +38,13 @@ builder.Services.AddCors(options =>
     {
         policy
             .WithOrigins(
-                "https://inquisitive-puffpuff-ced639.netlify.app", // deploy nuevo en Netlify
-                "https://lustrous-florentine-2899fd.netlify.app",  // deploy anterior (por las dudas)
-                "http://localhost:3000",                           // front local
-                "http://localhost:5000",                           // variante local
-                "http://localhost:5173"                            // Vite u otros
+                "https://inquisitive-puffpuff-ced639.netlify.app", // tu front en Netlify
+                "http://localhost:3000",
+                "http://localhost:5000",
+                "http://localhost:5173"
             )
             .AllowAnyHeader()
             .AllowAnyMethod();
-            // Si en el futuro usás cookies/JWT por cookies, agregamos .AllowCredentials()
     });
 });
 
@@ -60,14 +58,23 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+//
+// 🔹 APLICAR MIGRACIONES AUTOMÁTICAMENTE EN RENDER
+//
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    db.Database.Migrate();   // 👉 crea todas las tablas si no existen
+}
+
 // 🔹 Swagger (lo dejamos siempre activado)
 app.UseSwagger();
 app.UseSwaggerUI();
 
-// 🔹 Redirección a HTTPS (en Render ya viene con proxy HTTPS)
+// 🔹 HTTPS redirection (en Render hay proxy HTTPS, pero no molesta)
 app.UseHttpsRedirection();
 
-// 🔹 Activar CORS (IMPORTANTE: antes de MapControllers)
+// 🔹 Activar CORS
 app.UseCors(CorsPolicyName);
 
 app.MapControllers();

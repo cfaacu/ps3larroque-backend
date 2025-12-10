@@ -2766,14 +2766,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Application\\PS3Larroque.Application.csproj": {
-              "projectPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Application\\PS3Larroque.Application.csproj"
+            "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Application\\PS3Larroque.Application.csproj": {
+              "projectPath": "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Application\\PS3Larroque.Application.csproj"
             },
-            "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj": {
-              "projectPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj"
+            "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj": {
+              "projectPath": "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj"
             },
-            "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Infrastructure\\PS3Larroque.Infrastructure.csproj": {
-              "projectPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Infrastructure\\PS3Larroque.Infrastructure.csproj"
+            "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Infrastructure\\PS3Larroque.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Infrastructure\\PS3Larroque.Infrastructure.csproj"
             }
           }
         }

@@ -753,11 +753,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Infrastructure\\PS3Larroque.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Infrastructure\\PS3Larroque.Infrastructure.csproj",
       "projectName": "PS3Larroque.Infrastructure",
-      "projectPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Infrastructure\\PS3Larroque.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Infrastructure\\PS3Larroque.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\facu\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\facu\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -772,11 +772,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Application\\PS3Larroque.Application.csproj": {
-              "projectPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Application\\PS3Larroque.Application.csproj"
+            "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Application\\PS3Larroque.Application.csproj": {
+              "projectPath": "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Application\\PS3Larroque.Application.csproj"
             },
-            "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj": {
-              "projectPath": "c:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj"
+            "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj": {
+              "projectPath": "C:\\Users\\facu\\Desktop\\Proyectos\\PS3\\PS3Larroque_Back\\PS3Larroque.Domain\\PS3Larroque.Domain.csproj"
             }
           }
         }
