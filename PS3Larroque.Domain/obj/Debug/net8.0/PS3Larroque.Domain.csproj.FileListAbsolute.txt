@@ -9,3 +9,4 @@ C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Domain\obj\Debu
 C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Domain\obj\Debug\net8.0\refint\PS3Larroque.Domain.dll
 C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Domain\obj\Debug\net8.0\PS3Larroque.Domain.pdb
 C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Domain\obj\Debug\net8.0\ref\PS3Larroque.Domain.dll
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Domain\obj\Debug\net8.0\PS3Larroque.Domain.sourcelink.json

@@ -4,6 +4,13 @@ namespace PS3Larroque.Application.Interfaces;
 
 public interface IStockService
 {
-    Task<List<StockSearchResultDto>> BuscarAsync(string term, int limit = 20);
-    Task<List<StockSearchResultDto>> GetByCodigoAsync(string codigo);
+    Task<IEnumerable<StockSearchResultDto>> BuscarAsync(
+        string term,
+        int sucursalId,
+        int limit = 30);
+
+    // También buscar por código, pero **solo dentro de una sucursal**
+    Task<List<StockSearchResultDto>> GetByCodigoAsync(
+        string codigo,
+        int sucursalId);
 }

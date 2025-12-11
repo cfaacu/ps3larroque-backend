@@ -15,25 +15,25 @@ public class StockController : ControllerBase
         _stockService = stockService;
     }
 
+    // /api/stock/buscar?term=algo&sucursal=2&limit=30
     [HttpGet("buscar")]
     public async Task<ActionResult<IEnumerable<StockSearchResultDto>>> Buscar(
         [FromQuery] string term,
-        [FromQuery] int limit = 20)
+        [FromQuery] int sucursal,
+        [FromQuery] int limit = 30)
     {
-        if (string.IsNullOrWhiteSpace(term))
-            return BadRequest("term es requerido.");
-
-        var resultados = await _stockService.BuscarAsync(term, limit);
-        return Ok(resultados);
+        var result = await _stockService.BuscarAsync(term, sucursal, limit);
+        return Ok(result);
     }
 
-    [HttpGet("{codigo}")]
-    public async Task<ActionResult<IEnumerable<StockSearchResultDto>>> PorCodigo(string codigo)
+    // /api/stock/por-codigo?codigo=8713...&sucursal=2
+    [HttpGet("por-codigo")]
+    public async Task<ActionResult<IEnumerable<StockSearchResultDto>>> PorCodigo(
+        [FromQuery] string codigo,
+        [FromQuery] int sucursal)
     {
-        var resultados = await _stockService.GetByCodigoAsync(codigo);
-        if (resultados.Count == 0)
-            return NotFound();
-
-        return Ok(resultados);
+        var result = await _stockService.GetByCodigoAsync(codigo, sucursal);
+        return Ok(result);
     }
 }
+

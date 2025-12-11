@@ -15,3 +15,4 @@ C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\
 C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\obj\Debug\net8.0\refint\PS3Larroque.Infrastructure.dll
 C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\obj\Debug\net8.0\PS3Larroque.Infrastructure.pdb
 C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\obj\Debug\net8.0\ref\PS3Larroque.Infrastructure.dll
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Infrastructure\obj\Debug\net8.0\PS3Larroque.Infrastructure.sourcelink.json

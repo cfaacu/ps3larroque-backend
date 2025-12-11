@@ -13,3 +13,4 @@ C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Application\obj
 C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Application\obj\Debug\net8.0\refint\PS3Larroque.Application.dll
 C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Application\obj\Debug\net8.0\PS3Larroque.Application.pdb
 C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Application\obj\Debug\net8.0\ref\PS3Larroque.Application.dll
+C:\Users\facu\Desktop\Proyectos\PS3\PS3Larroque_Back\PS3Larroque.Application\obj\Debug\net8.0\PS3Larroque.Application.sourcelink.json
