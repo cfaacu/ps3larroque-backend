@@ -37,12 +37,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: CorsPolicyName, policy =>
     {
         policy
-            .WithOrigins(
-                "https://ps3larroque.netlify.app", // tu front en Netlify
-                "http://localhost:3000",
-                "http://localhost:5000",
-                "http://localhost:5173"
-            )
+            .AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
