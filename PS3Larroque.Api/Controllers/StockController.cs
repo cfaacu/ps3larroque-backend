@@ -18,13 +18,14 @@ public class StockController : ControllerBase
     // /api/stock/buscar?term=algo&sucursal=2&limit=30
     [HttpGet("buscar")]
     public async Task<ActionResult<IEnumerable<StockSearchResultDto>>> Buscar(
-        [FromQuery] string term,
-        [FromQuery] int sucursal,
-        [FromQuery] int limit = 30)
+        string term,
+        int sucursalId,   // 👈 ESTE NOMBRE DEBE COINCIDIR CON LO QUE USA EL FRONT
+        int limit = 30)
     {
-        var result = await _stockService.BuscarAsync(term, sucursal, limit);
+        var result = await _stockService.BuscarAsync(term, sucursalId, limit);
         return Ok(result);
     }
+
 
     // /api/stock/por-codigo?codigo=8713...&sucursal=2
     [HttpGet("por-codigo")]
