@@ -38,7 +38,7 @@ builder.Services.AddCors(options =>
     {
         policy
             .WithOrigins(
-                "https://inquisitive-puffpuff-ced639.netlify.app", // tu front en Netlify
+                "https://ps3larroque.netlify.app/", // tu front en Netlify
                 "http://localhost:3000",
                 "http://localhost:5000",
                 "http://localhost:5173"
