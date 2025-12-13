@@ -53,7 +53,7 @@ public class ApplicationDbContext : DbContext
             entity.HasKey(e => e.Id);
 
             entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.Sucursal).HasColumnName("sucursal");
+            entity.Property(e => e.SucursalId).HasColumnName("sucursal_id");
             entity.Property(e => e.Vendedor).HasColumnName("vendedor");
             entity.Property(e => e.FechaCreacion).HasColumnName("creada_en");
             entity.Property(e => e.Estado).HasColumnName("estado");

@@ -16,19 +16,25 @@ public class PreventaService : IPreventaService
 
     public async Task<int> CrearPreventaAsync(PreventaCreateDto dto)
     {
+        if (dto.SucursalId <= 0)
+            throw new InvalidOperationException("Sucursal inválida.");
+
         if (dto.Items == null || dto.Items.Count == 0)
             throw new InvalidOperationException("La preventa debe tener al menos un ítem.");
 
         var preventa = new Preventa
         {
-            Sucursal = dto.Sucursal,
+            SucursalId = dto.SucursalId,
             Vendedor = dto.Vendedor,
             Estado = "pendiente",
             FechaCreacion = DateTime.UtcNow
         };
 
-        var codigos = dto.Items.Select(i => i.Codigo).Distinct().ToList();
+        var codigos = dto.Items.Select(i => i.Codigo).Where(c => !string.IsNullOrWhiteSpace(c)).Distinct().ToList();
+
+        // Código -> Descripción
         var productos = await _db.ProductosLegacy
+            .AsNoTracking()
             .Where(p => codigos.Contains(p.Codigo))
             .ToDictionaryAsync(p => p.Codigo, p => p.Descripcion);
 
@@ -50,47 +56,48 @@ public class PreventaService : IPreventaService
         return preventa.Id;
     }
 
-            public async Task<List<PreventaListadoDto>> ListarAsync(int max = 100)
+    public async Task<List<PreventaListadoDto>> ListarAsync(int sucursalId, int max = 100)
+    {
+        if (sucursalId <= 0)
+            throw new ArgumentException($"Sucursal inválida: {sucursalId}", nameof(sucursalId));
+
+        // Diccionario para mapear descripción
+        var productosDict = await _db.ProductosLegacy
+            .AsNoTracking()
+            .ToDictionaryAsync(p => p.Codigo, p => p.Descripcion);
+
+        var preventas = await _db.Preventas
+            .AsNoTracking()
+            .Where(p => p.SucursalId == sucursalId)   // 👈 filtro por sucursal
+            .Include(p => p.Items)
+            .OrderByDescending(p => p.Id)
+            .Take(max)
+            .ToListAsync();
+
+        var resultado = preventas.Select(p => new PreventaListadoDto
         {
-            // Traemos todos los productos para poder mapear códigos -> descripción
-            var productosDict = await _db.ProductosLegacy
-                .AsNoTracking()
-                .ToDictionaryAsync(p => p.Codigo, p => p.Descripcion);
-
-            var preventas = await _db.Preventas
-                .AsNoTracking()
-                .Include(p => p.Items)
-                .OrderByDescending(p => p.Id)
-                .Take(max)
-                .ToListAsync();
-
-            var resultado = preventas.Select(p => new PreventaListadoDto
+            Id = p.Id,
+            SucursalId = p.SucursalId,
+            Vendedor = p.Vendedor,
+            Fecha = p.FechaCreacion,
+            Items = p.Items.Select(it =>
             {
-                Id = p.Id,
-                Sucursal = p.Sucursal,
-                Vendedor = p.Vendedor,
-                Fecha = p.FechaCreacion,
-                Items = p.Items.Select(it =>
+                productosDict.TryGetValue(it.Codigo, out var desc);
+                return new PreventaItemDto
                 {
-                    productosDict.TryGetValue(it.Codigo, out var desc);
-                    return new PreventaItemDto
-                    {
-                        Codigo = it.Codigo,
-                        Descripcion = desc ?? string.Empty,
-                        Cantidad = it.Cantidad,
-                        PrecioUnit = it.PrecioUnit
-                    };
-                }).ToList()
-            }).ToList();
+                    Codigo = it.Codigo,
+                    Descripcion = desc ?? it.Descripcion ?? string.Empty,
+                    Cantidad = it.Cantidad,
+                    PrecioUnit = it.PrecioUnit
+                };
+            }).ToList()
+        }).ToList();
 
-            // Calcular total por preventa
-            foreach (var pr in resultado)
-            {
-                pr.Total = pr.Items.Sum(i => i.Subtotal);
-            }
+        foreach (var pr in resultado)
+            pr.Total = pr.Items.Sum(i => i.Subtotal);
 
-            return resultado;
-        }
+        return resultado;
+    }
 
     public async Task MarcarProcesadaAsync(int id)
     {
