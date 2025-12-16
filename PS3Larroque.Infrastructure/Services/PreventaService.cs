@@ -30,9 +30,12 @@ public class PreventaService : IPreventaService
             FechaCreacion = DateTime.UtcNow
         };
 
-        var codigos = dto.Items.Select(i => i.Codigo).Where(c => !string.IsNullOrWhiteSpace(c)).Distinct().ToList();
+        var codigos = dto.Items
+            .Select(i => i.Codigo)
+            .Where(c => !string.IsNullOrWhiteSpace(c))
+            .Distinct()
+            .ToList();
 
-        // Código -> Descripción
         var productos = await _db.ProductosLegacy
             .AsNoTracking()
             .Where(p => codigos.Contains(p.Codigo))
@@ -56,19 +59,23 @@ public class PreventaService : IPreventaService
         return preventa.Id;
     }
 
-    public async Task<List<PreventaListadoDto>> ListarAsync(int sucursalId, int max = 100)
+    public async Task<List<PreventaListadoDto>> ListarAsync(int sucursalId, int max = 100, bool soloPendientes = true)
     {
         if (sucursalId <= 0)
             throw new ArgumentException($"Sucursal inválida: {sucursalId}", nameof(sucursalId));
 
-        // Diccionario para mapear descripción
         var productosDict = await _db.ProductosLegacy
             .AsNoTracking()
             .ToDictionaryAsync(p => p.Codigo, p => p.Descripcion);
 
-        var preventas = await _db.Preventas
+        IQueryable<Preventa> q = _db.Preventas
             .AsNoTracking()
-            .Where(p => p.SucursalId == sucursalId)   // 👈 filtro por sucursal
+            .Where(p => p.SucursalId == sucursalId);
+
+        if (soloPendientes)
+            q = q.Where(p => p.Estado == "pendiente");
+
+        var preventas = await q
             .Include(p => p.Items)
             .OrderByDescending(p => p.Id)
             .Take(max)
@@ -79,6 +86,7 @@ public class PreventaService : IPreventaService
             Id = p.Id,
             SucursalId = p.SucursalId,
             Vendedor = p.Vendedor,
+            Estado = p.Estado,
             Fecha = p.FechaCreacion,
             Items = p.Items.Select(it =>
             {

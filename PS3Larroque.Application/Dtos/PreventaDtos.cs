@@ -37,8 +37,9 @@ public class PreventaItemDto
 public class PreventaListadoDto
 {
     public int Id { get; set; }
-    public int SucursalId { get; set; }          // 👈 int
+    public int SucursalId { get; set; }
     public string Vendedor { get; set; } = string.Empty;
+    public string Estado { get; set; } = string.Empty;
     public DateTime Fecha { get; set; }
     public decimal Total { get; set; }
     public List<PreventaItemDto> Items { get; set; } = new();

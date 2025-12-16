@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using PS3Larroque.Application.Dtos;
 using PS3Larroque.Application.Interfaces;
 
@@ -9,10 +10,12 @@ namespace PS3Larroque.Api.Controllers;
 public class PreventasController : ControllerBase
 {
     private readonly IPreventaService _preventaService;
+    private readonly ILogger<PreventasController> _logger;
 
-    public PreventasController(IPreventaService preventaService)
+    public PreventasController(IPreventaService preventaService, ILogger<PreventasController> logger)
     {
         _preventaService = preventaService;
+        _logger = logger;
     }
 
     [HttpPost]
@@ -25,10 +28,20 @@ public class PreventasController : ControllerBase
         return Ok(id);
     }
 
+    // ✅ AHORA RECIBE SUCURSALID Y (OPCIONAL) SOLOPENDIENTES
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<PreventaListadoDto>>> Listar([FromQuery] int max = 100)
+    public async Task<ActionResult<IEnumerable<PreventaListadoDto>>> Listar(
+        [FromQuery] int sucursalId,
+        [FromQuery] int max = 100,
+        [FromQuery] bool soloPendientes = true)
     {
-        var lista = await _preventaService.ListarAsync(max);
+        _logger.LogInformation("[GET /api/preventas] sucursalId={SucursalId} max={Max} soloPendientes={SoloPendientes}",
+            sucursalId, max, soloPendientes);
+
+        var lista = await _preventaService.ListarAsync(sucursalId, max, soloPendientes);
+
+        _logger.LogInformation("[GET /api/preventas] Devueltas={Count}", lista.Count);
+
         return Ok(lista);
     }
 
