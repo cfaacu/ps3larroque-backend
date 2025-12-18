@@ -8,7 +8,6 @@ public class StockService : IStockService
 {
     private readonly ApplicationDbContext _db;
 
-    // Mapeo ID → nombre que querés mostrar
     private static readonly Dictionary<int, string> Sucursales = new()
     {
         { 1, "Banfield" },
@@ -28,11 +27,7 @@ public class StockService : IStockService
         _db = db;
     }
 
-    // Busca por término (código o descripción) dentro de UNA sucursal
-    public async Task<IEnumerable<StockSearchResultDto>> BuscarAsync(
-        string term,
-        int sucursalId,
-        int limit = 30)
+    public async Task<IEnumerable<StockSearchResultDto>> BuscarAsync(string term, int sucursalId, int limit = 30)
     {
         if (string.IsNullOrWhiteSpace(term))
             return new List<StockSearchResultDto>();
@@ -40,26 +35,28 @@ public class StockService : IStockService
         if (!Sucursales.ContainsKey(sucursalId))
             throw new ArgumentException($"Sucursal inválida: {sucursalId}", nameof(sucursalId));
 
-        string sucursalText = sucursalId.ToString();
+        var sucursalText = sucursalId.ToString();
         term = term.Trim();
 
-        // Si es todo números y larguito, asumimos código de barras
-        bool esCodigo = term.All(char.IsDigit) && term.Length >= 8;
+        bool esCodigoBarras = term.All(char.IsDigit) && term.Length >= 8;
 
         var query = _db.StocksSucursal
             .AsNoTracking()
-            .Where(s => s.Sucursal == sucursalText && s.Stock > 0);
+            // ✅ trim en sucursal y código para evitar espacios invisibles
+            .Where(s => (s.Sucursal ?? "").Trim() == sucursalText && s.Stock > 0);
 
-        if (esCodigo)
+        if (esCodigoBarras)
         {
-            query = query.Where(s => s.Codigo == term);
+            // Código de barras (numérico): exacto pero trim + case no aplica
+            query = query.Where(s => ((s.Codigo ?? "").Trim()) == term);
         }
         else
         {
-            string like = $"%{term.ToLower()}%";
+            var likeDesc = $"%{term}%";
             query = query.Where(s =>
-                EF.Functions.ILike(s.Descripcion, like) ||
-                s.Codigo == term);
+                EF.Functions.ILike((s.Descripcion ?? ""), likeDesc) ||
+                EF.Functions.ILike(((s.Codigo ?? "").Trim()), term) // ✅ exacto, case-insensitive, y sin espacios
+            );
         }
 
         var list = await query
@@ -83,10 +80,7 @@ public class StockService : IStockService
         return list;
     }
 
-    // Busca por código exacto dentro de UNA sucursal
-    public async Task<List<StockSearchResultDto>> GetByCodigoAsync(
-        string codigo,
-        int sucursalId)
+    public async Task<List<StockSearchResultDto>> GetByCodigoAsync(string codigo, int sucursalId)
     {
         if (string.IsNullOrWhiteSpace(codigo))
             return new List<StockSearchResultDto>();
@@ -94,12 +88,13 @@ public class StockService : IStockService
         if (!Sucursales.ContainsKey(sucursalId))
             throw new ArgumentException($"Sucursal inválida: {sucursalId}", nameof(sucursalId));
 
-        string sucursalText = sucursalId.ToString();
+        var sucursalText = sucursalId.ToString();
         codigo = codigo.Trim();
 
         var list = await _db.StocksSucursal
             .AsNoTracking()
-            .Where(s => s.Codigo == codigo && s.Sucursal == sucursalText)
+            .Where(s => (s.Sucursal ?? "").Trim() == sucursalText)
+            .Where(s => EF.Functions.ILike(((s.Codigo ?? "").Trim()), codigo))
             .Select(s => new StockSearchResultDto
             {
                 Codigo         = s.Codigo,
