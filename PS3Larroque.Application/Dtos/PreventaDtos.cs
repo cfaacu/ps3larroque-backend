@@ -4,8 +4,13 @@ public class PreventaItemCreateDto
 {
     public string Codigo { get; set; } = null!;
     public int Cantidad { get; set; }
+
     public decimal PrecioUnit { get; set; }
+
+    // ✅ NUEVO
+    public string MetodoPagoKey { get; set; } = "base";
 }
+
 
 public class PreventaCreateDto
 {
@@ -27,12 +32,17 @@ public class PreventaListItemDto
 
 public class PreventaItemDto
 {
-    public string Codigo { get; set; } = string.Empty;
-    public string Descripcion { get; set; } = string.Empty;
+    public string Codigo { get; set; } = null!;
+    public string Descripcion { get; set; } = null!;
     public int Cantidad { get; set; }
     public decimal PrecioUnit { get; set; }
+
+    // ✅ NUEVO
+    public string MetodoPagoKey { get; set; } = "base";
+
     public decimal Subtotal => Cantidad * PrecioUnit;
 }
+
 
 public class PreventaListadoDto
 {

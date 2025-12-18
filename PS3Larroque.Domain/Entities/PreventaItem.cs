@@ -7,7 +7,10 @@ public class PreventaItem
     public string Codigo { get; set; } = null!;
     public string Descripcion { get; set; } = null!;
     public int Cantidad { get; set; }
+
     public decimal PrecioUnit { get; set; }
+
+    public string MetodoPagoKey { get; set; } = "base";
 
     public Preventa Preventa { get; set; } = null!;
 }

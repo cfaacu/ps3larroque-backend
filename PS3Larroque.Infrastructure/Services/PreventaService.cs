@@ -50,7 +50,10 @@ public class PreventaService : IPreventaService
                 Codigo = it.Codigo,
                 Descripcion = desc,
                 Cantidad = it.Cantidad,
-                PrecioUnit = it.PrecioUnit
+
+                PrecioUnit = it.PrecioUnit,
+
+                MetodoPagoKey = string.IsNullOrWhiteSpace(it.MetodoPagoKey) ? "base" : it.MetodoPagoKey.Trim()
             });
         }
 
@@ -96,7 +99,10 @@ public class PreventaService : IPreventaService
                     Codigo = it.Codigo,
                     Descripcion = desc ?? it.Descripcion ?? string.Empty,
                     Cantidad = it.Cantidad,
-                    PrecioUnit = it.PrecioUnit
+                    PrecioUnit = it.PrecioUnit,
+
+                    // ✅ NUEVO
+                    MetodoPagoKey = it.MetodoPagoKey
                 };
             }).ToList()
         }).ToList();

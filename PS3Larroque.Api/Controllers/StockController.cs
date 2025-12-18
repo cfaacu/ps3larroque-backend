@@ -15,7 +15,7 @@ public class StockController : ControllerBase
         _stockService = stockService;
     }
 
-    // /api/stock/buscar?term=algo&sucursal=2&limit=30
+    // ✅ /api/stock/buscar?term=algo&sucursalId=2&limit=30
     [HttpGet("buscar")]
     public async Task<ActionResult<IEnumerable<StockSearchResultDto>>> Buscar(
         string term,
@@ -25,7 +25,6 @@ public class StockController : ControllerBase
         var result = await _stockService.BuscarAsync(term, sucursalId, limit);
         return Ok(result);
     }
-
 
     // /api/stock/por-codigo?codigo=8713...&sucursal=2
     [HttpGet("por-codigo")]
@@ -37,4 +36,3 @@ public class StockController : ControllerBase
         return Ok(result);
     }
 }
-
