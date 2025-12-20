@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PS3Larroque.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08b2411efe9c0bde4dd018eece7095b62c67cb4c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d786f94a208d57fc40a159428ada15c236f94b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("PS3Larroque.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PS3Larroque.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
